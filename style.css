@@ -1,31 +1,43 @@
+/* Importing Roboto and Inconsolata font families from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@125,200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* Reset default margin and padding for the entire document */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
 }
+
+/* Set background image for the entire page */
 body {
   background-image: url('./images/bg_img2.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; /* Background stays fixed during scroll */
 }
+
+/* Container for centering content horizontally */
 .container1 {
   display: flex;
   justify-content: center;
 }
+
+/* Font style for medium weight Roboto text */
 .roboto-medium {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
+
+/* Font style for bold Inconsolata text */
 .roboto-bold {
   font-family: "Inconsolata", monospace;
   font-optical-sizing: auto;
   font-weight: 900;
 }
+
+/* Style for the AGENDA heading */
 .agenda {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
@@ -33,35 +45,51 @@ body {
   font-size: 30px;
   text-align: center;
 }
+
+/* Base style for the timeline container */
 .timeline {
   list-style: none;
   padding: 0;
   position: relative;
 }
+
+/* Style for right-aligned timeline items */
 .timeline-item-r {
   position: relative;
   margin-bottom: 50px;
 }
 
+/* =============================================== */
+/* MOBILE STYLES - for screens between 200px and 990px */
+/* =============================================== */
 @media only screen and (min-width: 200px) and (max-width: 990px) {
+  /* Stack items vertically in mobile view */
   .sameRow {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 3%;
   }
+  
+  /* Center the challenge list items */
   .challenge-list {
     display: flex;
     justify-content: center;
   }
+  
+  /* Stack speaker image and info vertically in mobile view */
   .same-row-speaker {
     display: flex;
     flex-direction: column;
   }
+  
+  /* Speaker image container size for mobile */
   .speaker-img-div {
     height: 20%;
     margin: 0;
   }
+  
+  /* Speaker image styling for mobile */
   .speaker-img {
     width: 100%;
     height: 100%;
@@ -69,6 +97,8 @@ body {
     border-radius: 50%;
     margin: 0;
   }
+  
+  /* Left-aligned timeline items positioning for mobile */
   .timeline-item-l {
     width: 180px;
     left: 50%; 
@@ -76,11 +106,15 @@ body {
     position: relative;
     margin-bottom: 50px;
   }
+  
+  /* Challenge timeline content positioning for mobile */
   #timelineContent4, #timelineContent5, #timelineContent6 {
     width: 180px;
     position: relative;
     margin-bottom: 50px;
   }
+  
+  /* Keynote timeline content positioning for mobile */
   #timelineContent1 {
     width: 180px;
     left: 50%; 
@@ -88,6 +122,8 @@ body {
     position: relative;
     margin-bottom: 50px;
   }
+  
+  /* Workshop timeline content positioning for mobile */
   #timelineContent2, #timelineContent3 {
     width: 180px;
     left: 50%; 
@@ -95,6 +131,8 @@ body {
     position: relative;
     margin-bottom: 50px;
   }
+  
+  /* Neutral button styling for mobile (used for non-clickable items) */
   .button-n {
     width: 180px;
     background-color: #F8F0E3;
@@ -104,6 +142,8 @@ body {
     font-size: 15px;
     padding: 5%;
   }
+  
+  /* Red button styling for mobile (used for workshops) */
   .button-r {
     width: 180px;
     background-color: #990000;
@@ -113,6 +153,8 @@ body {
     font-size: 20px;
     padding: 20px;
   }
+  
+  /* Keynote button styling for mobile */
   .button-r-keynote {
     width: 180px;
     background-color: #990000;
@@ -122,6 +164,8 @@ body {
     font-size: 20px;
     padding: 20px;
   }
+  
+  /* Challenge button styling for mobile */
   .button-r-challenge {
     width: 180px;
     background-color: #990000;
@@ -131,40 +175,57 @@ body {
     font-size: 20px;
     padding: 20px;
   }
+  
+  /* Logo styling for mobile - smaller size */
   .logo {
     max-width: 40%;
     height: auto;
     display: block;
     margin: 0 auto;
   }
+  
+  /* WIE logo styling for mobile */
   .wie-logo {
     max-width: 20%;
     height: auto;
     display: block;
     margin: 0 auto;
   }
+  
+  /* Close/clear icon sizing for mobile */
   p img {
     width: 14px;
     height: 14px;
   }
 }
+
+/* =============================================== */
+/* DESKTOP STYLES - for screens 992px and above */
+/* =============================================== */
 @media only screen and (min-width: 992px) {
+  /* Arrange items horizontally in desktop view */
   .sameRow {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 3%;
-  }  
+  }
+  
+  /* Arrange speaker image and info side by side in desktop view */
   .same-row-speaker {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  
+  /* Speaker image container sizing for desktop */
   .speaker-img-div {
     width: 40%;
     height: 20%;
     margin: 0;
   }
+  
+  /* Speaker image styling for desktop */
   .speaker-img {
     width: 100%;
     height: 100%;
@@ -172,24 +233,33 @@ body {
     border-radius: 50%;
     margin: 0;
   }
+  
+  /* Speaker details container width for desktop */
   .speaker-details {
     width: 40%;
   }
+  
+  /* Challenge details container styling for desktop */
   .challenge-details {
     width: 80%;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin: 0 auto; 
+    /* Commented out flex styles that are not currently in use */
     /* display: flex;
     flex-direction: column;
     flex-wrap: wrap; */
   }
+  
+  /* Helper class for centering content */
   .yay {
     align-items: center;
     justify-content: center;
     text-align: center;
   }
+  
+  /* Left-aligned timeline items styling for desktop - wider */
   .timeline-item-l {
     width: 800px;
     left: 50%; 
@@ -198,11 +268,15 @@ body {
     position: relative;
     margin-bottom: 50px;
   }
+  
+  /* Challenge timeline content styling for desktop */
   #timelineContent4, #timelineContent5, #timelineContent6 {
     width: 300px;
     position: relative;
     margin-bottom: 50px;
   }
+  
+  /* Keynote timeline content styling for desktop - full width */
   #timelineContent1 {
     width: 800px;
     left: 50%; 
@@ -210,6 +284,8 @@ body {
     position: relative;
     margin-bottom: 50px;
   }
+  
+  /* Workshop timeline content styling for desktop - medium width */
   #timelineContent2 {
     width: 400px;
     left: 50%; 
@@ -217,6 +293,8 @@ body {
     position: relative;
     margin-bottom: 50px;
   }
+  
+  /* Second workshop timeline content styling for desktop - medium width */
   #timelineContent3 {
     width: 400px;
     left: 50%; 
@@ -224,6 +302,8 @@ body {
     position: relative;
     margin-bottom: 50px;
   }
+  
+  /* Neutral button styling for desktop - full width */
   .button-n {
     width: 800px;
     background-color: #F8F0E3;
@@ -233,6 +313,8 @@ body {
     font-size: 15px;
     padding: 2%;
   }
+  
+  /* Red button styling for desktop - for workshops */
   .button-r {
     width: 400px;
     background-color: #990000;
@@ -242,6 +324,8 @@ body {
     font-size: 20px;
     padding: 20px;
   }
+  
+  /* Keynote button styling for desktop - full width */
   .button-r-keynote {
     width: 800px;
     background-color: #990000;
@@ -251,6 +335,8 @@ body {
     font-size: 20px;
     padding: 20px;
   }
+  
+  /* Challenge button styling for desktop - smaller width */
   .button-r-challenge {
     width: 300px;
     background-color: #990000;
@@ -260,33 +346,48 @@ body {
     font-size: 20px;
     padding: 20px;
   }
+  
+  /* Logo sizing for desktop - smaller */
   .logo {
     max-width: 20%;
     height: auto;
     display: block;
     margin: 0 auto;
   }
+  
+  /* WIE logo sizing for desktop */
   .wie-logo {
     max-width: 20%;
     height: auto;
     display: block;
     margin: 0 auto;
   }
+  
+  /* Close/clear icon sizing for desktop */
   p img {
     width: 14px;
     height: 14px;
   }
 }
 
+/* =============================================== */
+/* COMMON STYLES - applied to both mobile and desktop */
+/* =============================================== */
+
+/* Add margin to the top of speaker descriptions */
 .speaker-desc {
   margin-top: 5%;
 }
+
+/* Hidden by default - expanded content areas */
 .timeline-content-desc {
   display: none;
   position: relative;
   transform: translateZ(-100%);
   margin-bottom: 50px;
 }
+
+/* Main title styling using Dancing Script font */
 .title {
   font-family: "Dancing Script", cursive;
   font-size: 50px;
@@ -295,6 +396,8 @@ body {
   font-style: normal;
   text-align: center;
 }
+
+/* Styling for the expanded content buttons */
 .button-r-desc {
   border: #FFCC00 solid;
   border-radius: 20px;
@@ -302,13 +405,19 @@ body {
   font-size: 20px;
   padding: 20px;
 }
+
+/* Title style 1 - larger font */
 .button-title-1 {
   font-size: 20px;
 }
+
+/* Title style 2 - cursive font */
 .button-title-2 {
   font-size: 20px;
   font-family: "Dancing Script", cursive;
 }
+
+/* Speaker name styling - bold Inconsolata */
 .button-title-name {
   font-family: "Inconsolata", monospace;
   font-optical-sizing: auto;
@@ -316,6 +425,8 @@ body {
   font-size: 30px;
   margin: 0; 
 }
+
+/* Speaker job title styling - medium weight Inconsolata */
 .button-title-job {
   font-family: "Inconsolata", monospace;
   font-optical-sizing: auto;
@@ -323,6 +434,8 @@ body {
   font-size: 20px;
   margin: 0; 
 }
+
+/* Speaker organization styling - medium weight Inconsolata */
 .button-title-org {
   font-family: "Inconsolata", monospace;
   font-optical-sizing: auto;
@@ -330,6 +443,8 @@ body {
   font-size: 20px;
   margin: 0; 
 }
+
+/* Speaker graduation info styling - medium weight, smaller size */
 .button-title-grad {
   font-family: "Inconsolata", monospace;
   font-optical-sizing: auto;
@@ -337,16 +452,24 @@ body {
   font-size: 15px;
   margin: 0; 
 }
+
+/* Description text styling - cursive font */
 .button-title-desc {
   font-size: 20px;
   font-family: "Dancing Script", cursive;
 }
+
+/* Time display styling - small font */
 .button-time {
   font-size: 12px;
 }
+
+/* "Click for more" text styling - small font */
 .button-click {
   font-size: 13px;
 }
+
+/* Footer styling - USC gold border with cardinal background */
 .footer {
   border: #FFCC00 2px solid;
   border-radius: 0px;
@@ -355,6 +478,8 @@ body {
   color: black;
   padding-bottom: 1%;
 }
+
+/* Copyright and follow button styling - no border */
 .copyright, .follow {
   text-align: center;
   padding: 1%;
@@ -362,30 +487,46 @@ body {
   background-color: #990000;
   border: 0px;
 }
+
+/* "Visit WIE's website" link styling - light color on dark background */
 #followLink {
   color: whitesmoke;
 }
+
+/* Hover state for links - USC gold color */
 a :link :hover {
   color: #FFCC00;
 }
+
+/* Hide copyright information */
 .copyright {
   display: none;
 }
+
+/* Hover effect for red buttons - lighten and change text color */
 .button-r:hover {
   background-color: rgba(153, 27, 30, .1);
   color: #990000;
 }
+
+/* Hover effect for challenge buttons - lighten and change text color */
 .button-r-challenge:hover {
   background-color: rgba(153, 27, 30, .1);
   color: #990000;
 }
+
+/* Hover effect for keynote button - lighten and change text color */
 .button-r-keynote:hover {
   background-color: rgba(153, 27, 30, .1);
   color: #990000;
 }
+
+/* LinkedIn icon color - LinkedIn blue */
 .linkedin-icon {
   fill: #0077b5;
 }
+
+/* Margin for social media icons */
 .social {
   margin: 1%;
 }
